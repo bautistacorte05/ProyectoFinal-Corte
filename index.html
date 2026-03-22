@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda virtual de indumentaria y accesorios. Proyecto Final JavaScript - CoderHouse">
+    <title>Tienda Virtual | Proyecto Final JS</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script defer src="./data/productos.js"></script>
+    <script defer src="./js/main.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-contenido">
+            <h1 class="header-titulo">🛍️ Tienda Virtual</h1>
+            <button id="btn-abrir-carrito" class="btn-carrito">
+                🛒 Carrito <span id="contador-carrito" class="contador">0</span>
+            </button>
+        </div>
+    </header>
+
+    <div id="mensaje-alerta" class="mensaje-alerta"></div>
+
+    <main class="contenido-principal">
+
+        <section class="seccion-filtros">
+            <h2 class="titulo-seccion">Categorías</h2>
+            <div id="contenedor-filtros" class="filtros">
+                <button class="btn-filtro activo" data-categoria="todos">Todos</button>
+                <button class="btn-filtro" data-categoria="ropa">Ropa</button>
+                <button class="btn-filtro" data-categoria="calzado">Calzado</button>
+                <button class="btn-filtro" data-categoria="accesorios">Accesorios</button>
+            </div>
+        </section>
+
+        <section class="seccion-productos">
+            <h2 class="titulo-seccion">Productos</h2>
+            <div id="grilla-productos" class="grilla-productos">
+            
+            </div>
+        </section>
+
+    </main>
+
+    
+    <aside id="panel-carrito" class="panel-carrito cerrado">
+        <div class="carrito-encabezado">
+            <h2>Tu Carrito</h2>
+            <button id="btn-cerrar-carrito" class="btn-cerrar">✕</button>
+        </div>
+
+        <div id="lista-carrito" class="lista-carrito">
+       
+        </div>
+
+        <div class="carrito-pie">
+            <div class="total-linea">
+                <span>Total:</span>
+                <span id="total-carrito" class="total-monto">$0</span>
+            </div>
+            <button id="btn-vaciar-carrito" class="btn-vaciar">Vaciar carrito</button>
+            <button id="btn-finalizar-compra" class="btn-comprar">Finalizar compra</button>
+        </div>
+    </aside>
+
+    <div id="overlay-carrito" class="overlay oculto"></div>
+
+    <footer class="footer">
+        <p id="ultima-visita" class="ultima-visita"></p>
+        <p>Tienda Virtual &copy; 2025 | Proyecto Final JavaScript - CoderHouse</p>
+    </footer>
+
+</body>
+</html>
